@@ -1,6 +1,8 @@
 import { Link, Routes, Route } from 'react-router-dom'
 import './App.css'
-import Servicios from './Servicios'
+import Servicios from './pages/Servicios'
+import Productos from './pages/Productos'
+import AcercaDe from './pages/AcercaDe'
 
 function Inicio() {
   return (
@@ -29,24 +31,6 @@ function Inicio() {
   )
 }
 
-function Productos() {
-  return (
-    <section className="page">
-      <h1>Productos</h1>
-      <p>Próximamente podrás ver aquí las soluciones y productos de Abonate.</p>
-    </section>
-  )
-}
-
-function Contacto() {
-  return (
-    <section className="page">
-      <h1>Contacto</h1>
-      <p>¿Quieres saber más? Manda un mensaje o comparte tus datos de contacto.</p>
-    </section>
-  )
-}
-
 function App() {
   return (
     <div className="app-shell">
@@ -65,7 +49,7 @@ function App() {
           <Route path="/" element={<Inicio />} />
           <Route path="/servicios" element={<Servicios />} />
           <Route path="/productos" element={<Productos />} />
-          <Route path="/contacto" element={<Contacto />} />
+          <Route path="/Nosotros" element={<AcercaDe />} />
         </Routes>
       </main>
 
