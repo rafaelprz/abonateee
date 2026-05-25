@@ -37,6 +37,9 @@ body {
   font-weight: 800;
   color: #2f6b2f;
   letter-spacing: 0.5px;
+  
+  text-decoration: none;
+  color: #2f6b2f;
 }
 
 .navbar__brand::before {
@@ -207,4 +210,60 @@ body {
   .hero {
     padding: 4rem 1.5rem;
   }
+
+
 }
+
+  .nosotros {
+  padding: 5rem 2rem;
+  text-align: center;
+  background:
+    linear-gradient(rgba(244, 247, 239, 0.95), rgba(244, 247, 239, 0.95)),
+    radial-gradient(circle at top left, #cfe6b8, transparent 35%);
+  }
+
+  .nosotros__contenido {
+    max-width: 850px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 3rem;
+    border-radius: 28px;
+    box-shadow: 0 12px 30px rgba(58, 83, 43, 0.12);
+    border: 1px solid #dce8cf;
+  }
+
+  .nosotros__etiqueta {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: #6f9438;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1rem;
+  }
+
+  .nosotros h1 {
+    margin: 0 0 1.5rem;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    color: #245c2a;
+  }
+
+  .nosotros p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4e6644;
+    margin-bottom: 1.2rem;
+    
+  }
+
+  .nosotros blockquote {
+    margin: 2rem 0 0;
+    padding: 1.5rem 2rem;
+    border-left: 6px solid #8caf43;
+    background: #f4f7ef;
+    border-radius: 18px;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    font-weight: 700;
+    color: #2f6b2f;
+  }
