@@ -1,0 +1,46 @@
+# Dependencias de Node
+node_modules/
+
+# Archivos de build / salida
+dist/
+/build/
+
+# Archivos de entorno
+.env
+.env.*
+*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Dependencias / lockfiles no comprometidos (opcional, si usas npm/yarn/pnpm se debe versionar el lockfile)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Vite
+/.vite/
+
+# Editor/IDE
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Tipos de compilación de TypeScript
+*.tsbuildinfo
+
+# Archivos generados por el sistema
+npm-debug.log*
+yarn-debug.log*
+
+# Otros
+coverage/
+*.tgz
