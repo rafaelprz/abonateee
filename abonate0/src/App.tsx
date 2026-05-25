@@ -3,17 +3,42 @@ import "./App.css";
 import Servicios from "./pages/Servicios";
 import Productos from "./pages/Productos";
 import AcercaDe from "./pages/AcercaDe";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/autoplay";
+
+const carouselSlides = [
+  { src: "/lombriz.jpg", alt: "Producto 1" },
+  { src: "/lombriz.jpg", alt: "Producto 2" },
+  { src: "/lombriz.jpg", alt: "Producto 3" }
+];
 
 function Inicio() {
   return (
     <>
       <section id="home" className="hero">
         <h1>Bienvenido a Abonate</h1>
-        <p>
-          Esta es la sección principal de la aplicación y el mejor lugar para
-          comenzar.
-        </p>
-        <button type="button">Comenzar</button>
+        <Swiper
+          modules={[Autoplay]}
+          autoplay={{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }}
+          speed={700}
+          spaceBetween={20}
+          slidesPerView={1}
+          centeredSlides={true}
+          loop={true}
+          style={{ width: "100%", maxWidth: 700, margin: "2rem auto" }}
+        >
+          {carouselSlides.map((slide) => (
+            <SwiperSlide key={slide.alt}>
+              <img
+                src={slide.src}
+                alt={slide.alt}
+                style={{ width: "100%", height: "auto", display: "block", margin: "0 auto", borderRadius: 20 }}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </section>
 
       <section id="servicios" className="features">
