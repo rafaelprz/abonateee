@@ -40,7 +40,7 @@ function App() {
           <Link to="/">Inicio</Link>
           <Link to="/servicios">Servicios</Link>
           <Link to="/productos">Productos</Link>
-          <Link to="/contacto">Contacto</Link>
+          <Link to="/nosotros">Nosotros</Link>
         </nav>
       </header>
 
@@ -49,7 +49,7 @@ function App() {
           <Route path="/" element={<Inicio />} />
           <Route path="/servicios" element={<Servicios />} />
           <Route path="/productos" element={<Productos />} />
-          <Route path="/Nosotros" element={<AcercaDe />} />
+          <Route path="/nosotros" element={<AcercaDe />} />
         </Routes>
       </main>
 
