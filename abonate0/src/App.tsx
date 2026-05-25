@@ -18,27 +18,29 @@ function Inicio() {
   return (
     <>
       <section id="home" className="hero">
-        <h1>Bienvenido a Abonate</h1>
-        <Swiper
-          modules={[Autoplay]}
-          autoplay={{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }}
-          speed={700}
-          spaceBetween={20}
-          slidesPerView={1}
-          centeredSlides={true}
-          loop={true}
-          style={{ width: "100%", maxWidth: 700, margin: "2rem auto" }}
-        >
-          {carouselSlides.map((slide) => (
-            <SwiperSlide key={slide.alt}>
-              <img
-                src={slide.src}
-                alt={slide.alt}
-                style={{ width: "100%", height: "auto", display: "block", margin: "0 auto", borderRadius: 20 }}
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <div className="hero__carousel">
+          <Swiper
+            modules={[Autoplay]}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            speed={700}
+            spaceBetween={20}
+            slidesPerView={1}
+            centeredSlides={true}
+            loop={true}
+          >
+            {carouselSlides.map((slide) => (
+              <SwiperSlide key={slide.alt}>
+                <img src={slide.src} alt={slide.alt} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          <h1>Bienvenido a Abonate</h1>
+        </div>
       </section>
 
       <section id="servicios" className="features">
