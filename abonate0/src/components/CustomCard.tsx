@@ -30,7 +30,7 @@ function CustomCard({ cardInfo }: { cardInfo: CardInfo }) {
   };
 
   return (
-    <Card sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
+    <Card sx={{ height: "100%", display: "flex", flexDirection: "column", width: "350px" }}>
       <CardMedia
         component="img"
         alt={cardInfo.imageAlt ? cardInfo.imageAlt : ""}

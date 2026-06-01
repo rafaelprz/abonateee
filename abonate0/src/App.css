@@ -1,6 +1,7 @@
 /* App.css */
 
 :root {
+  --font-family: Nunito, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --bg: #f4f7ef;
   --surface: #CDBA9C;
   --surface-strong: #16381e;
@@ -23,7 +24,7 @@
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-family);
   background: var(--bg);
   color: var(--text);
 }
@@ -83,8 +84,9 @@ body {
 
 /* Content */
 
-.content {
+.app-content {
   flex: 1;
+  margin: 0 8rem;
 }
 
 /* Hero */

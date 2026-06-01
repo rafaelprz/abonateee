@@ -14,7 +14,7 @@ import "swiper/css/autoplay";
 const carouselSlides = [
   { src: "/abonateLogo.jpg", alt: "Producto 1" },
   { src: "/senllaTrepado.png", alt: "Producto 2" },
-  { src: "/abonateLogo.jpg", alt: "Producto 3" },
+  { src: "/floresEnCajones.png", alt: "Producto 3" },
 ];
 
 function Inicio() {
@@ -92,7 +92,7 @@ function App() {
         </nav>
       </header>
 
-      <main className="content">
+      <main className="app-content">
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/servicios" element={<Servicios />} />

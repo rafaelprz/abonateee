@@ -16,7 +16,7 @@ function Servicios() {
       <Grid container spacing={2}>
         {serviciosCardInfo.map((servicio) => (
           <Grid key={servicio.title} size={{ xs: 12, sm: 6, md: 4 }}>
-            <CustomCard cardInfo={servicio} />
+            <CustomCard key={servicio.title}  cardInfo={servicio} />
           </Grid>
         ))}
       </Grid>
