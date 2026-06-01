@@ -75,7 +75,13 @@ function App() {
     <div className="app-shell">
       <header className="navbar">
         <Link to="/" className="navbar__brand">
-          Abonate
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <img
+              src="../public/abonateLogo.jpg"
+              style={{ height: "66px" }}
+            ></img>
+            <div style={{ color: "#6c513c" }}>A B O N A T E</div>
+          </div>
         </Link>
         <nav className="navbar__menu">
           <Link to="/">Inicio</Link>

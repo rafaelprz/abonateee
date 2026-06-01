@@ -21,8 +21,8 @@ body {
 
 .navbar {
   width: 100%;
-  padding: 1rem 2.5rem;
-  background: #ffffff;
+  padding: 0 2.5rem;
+  background: #CDBA9C;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,13 +42,14 @@ body {
   color: #2f6b2f;
 }
 
-.navbar__brand::before {
+/*.navbar__brand::before {
   content: "🌿 ";
-}
+} */
 
 .navbar__menu {
   display: flex;
   gap: 1.5rem;
+  padding: 1rem 0;
 }
 
 .navbar__menu a {
