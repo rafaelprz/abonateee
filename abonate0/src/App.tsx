@@ -9,9 +9,9 @@ import "swiper/css";
 import "swiper/css/autoplay";
 
 const carouselSlides = [
-  { src: "/lombriz.jpg", alt: "Producto 1" },
-  { src: "/lombriz.jpg", alt: "Producto 2" },
-  { src: "/lombriz.jpg", alt: "Producto 3" }
+  { src: "/abonateLogo.jpg", alt: "Producto 1" },
+  { src: "/senllaTrepado.png", alt: "Producto 2" },
+  { src: "/abonateLogo.jpg", alt: "Producto 3" }
 ];
 
 function Inicio() {
