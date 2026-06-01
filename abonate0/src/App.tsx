@@ -7,6 +7,7 @@ import Plantas from "./pages/Plantas";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import "swiper/css";
 import "swiper/css/autoplay";
 
@@ -96,7 +97,27 @@ function App() {
       </main>
 
       <footer className="footer">
-        <p>© 2026 Abonate. Todos los derechos reservados.</p>
+        <div className="footer__contacto">
+          <div className="footer__redes">
+            <a
+              href="https://www.instagram.com/_abonate_/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://wa.me/59898129301"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaWhatsapp />
+            </a>
+          </div>
+        </div>
+        <div className="footer__copy">
+          <p>© 2026 Abonate. Todos los derechos reservados.</p>
+        </div>
       </footer>
     </div>
   );

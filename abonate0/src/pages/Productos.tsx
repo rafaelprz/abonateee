@@ -2,38 +2,20 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import CustomCard, { type CardInfo } from "../components/CustomCard";
 
-const productos = [
-  {
-    title: "Tierra",
-    description: "Descripción tierra.",
-    image: "/senllaTrepado.png",
-    imageAlt: "",
-  },
-  {
-    title: "Crema de Caléndula",
-    description: "Descripción crema de caléndula.",
-    image: "/senllaTrepado.png",
-    imageAlt: "",
-  },
-  {
-    title: "Compost",
-    description: "Descripción compost.",
-    image: "/senllaTrepado.png",
-    imageAlt: "",
-  },
-  {
-    title: "Harina de hueso",
-    description: "Descripción harina de hueso.",
-    image: "/senllaTrepado.png",
-    imageAlt: "",
-  },
-] as CardInfo[];
+import ProductosService from "../services/productos.services";
 
 function Productos() {
+  const productos = ProductosService.getProductos();
+  const productosCardInfo: CardInfo[] = productos.map((producto) => ({
+    title: producto.title,
+    description: producto.description,
+    image: producto.image,
+    imageAlt: producto.imageAlt,
+  }));
   return (
     <Box component="section" sx={{ p: 4 }}>
       <Grid container spacing={2}>
-        {productos.map((producto) => (
+        {productosCardInfo.map((producto) => (
           <Grid key={producto.title} size={{ xs: 12, sm: 6, md: 4 }}>
             <CustomCard cardInfo={producto} />
           </Grid>
