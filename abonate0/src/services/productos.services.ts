@@ -23,8 +23,8 @@ class ProductosService {
         imageAlt: "",
       },
       {
-        title: "Crema de Caléndula",
-        description: "Descripción crema de caléndula.",
+        title: "Harina de hueso",
+        description: "Descripción harina de hueso.",
         image: "/senllaTrepado.png",
         imageAlt: "",
       },

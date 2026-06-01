@@ -30,24 +30,58 @@ function CustomCard({ cardInfo }: { cardInfo: CardInfo }) {
   };
 
   return (
-    <Card sx={{ height: "100%", display: "flex", flexDirection: "column", width: "350px" }}>
+    <Card
+      sx={{
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        borderRadius: 4,
+        border: "1px solid var(--surface-muted)",
+        boxShadow: "0 8px 22px rgba(58, 83, 43, 0.1)",
+        backgroundColor: "var(--surface)",
+        transition: "transform 0.2s ease, box-shadow 0.2s ease",
+        '&:hover': {
+          transform: "translateY(-6px)",
+          boxShadow: "0 14px 30px rgba(58, 83, 43, 0.18)",
+        },
+      }}
+    >
       <CardMedia
         component="img"
         alt={cardInfo.imageAlt ? cardInfo.imageAlt : ""}
-        height="140"
+        height="250"
         image={cardInfo.image}
       />
       <CardContent sx={{ flexGrow: 1 }}>
-        <Typography variant="h6" component="h2" gutterBottom>
+        <Typography
+          variant="h6"
+          component="h2"
+          gutterBottom
+          sx={{ color: "var(--text)", fontWeight: 700 }}
+        >
           {cardInfo.title}
         </Typography>
-        <Typography variant="body2" color="text.secondary" component="p">
+        <Typography
+          variant="body2"
+          component="p"
+          sx={{ color: "var(--surface-strong)", lineHeight: 1.7 }}
+        >
           {cardInfo.description}
         </Typography>
       </CardContent>
-      <CardActions sx={{ justifyContent: "end" }}>
-        <Button type="button" onClick={handleClick}>
-          <OpenInFullIcon></OpenInFullIcon>
+      <CardActions sx={{ justifyContent: "end", px: 2, pb: 2 }}>
+        <Button
+          type="button"
+          onClick={handleClick}
+          sx={{
+            color: "var(--navbar-text)",
+            '&:hover': {
+              color: 'var(--accent)',
+              transform: "scale(1.1)"
+            },
+          }}
+        >
+          <OpenInFullIcon />
         </Button>
         <Dialog
           open={open}
@@ -70,11 +104,16 @@ function CustomCard({ cardInfo }: { cardInfo: CardInfo }) {
                 height: "100%",
                 display: "flex",
                 flexDirection: "column",
+                borderRadius: 4,
               }}
             >
               <CardContent>
-                <Typography variant="h5">{cardInfo.title}</Typography>
-                <Typography>{cardInfo.description}</Typography>
+                <Typography variant="h5" sx={{ color: "var(--primary-strong)" }}>
+                  {cardInfo.title}
+                </Typography>
+                <Typography sx={{ color: "var(--text-soft)" }}>
+                  {cardInfo.description}
+                </Typography>
               </CardContent>
             </Card>
           </DialogContent>
