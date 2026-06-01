@@ -3,6 +3,8 @@ import "./App.css";
 import Servicios from "./pages/Servicios";
 import Productos from "./pages/Productos";
 import AcercaDe from "./pages/AcercaDe";
+import Plantas from "./pages/Plantas";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -11,7 +13,7 @@ import "swiper/css/autoplay";
 const carouselSlides = [
   { src: "/abonateLogo.jpg", alt: "Producto 1" },
   { src: "/senllaTrepado.png", alt: "Producto 2" },
-  { src: "/abonateLogo.jpg", alt: "Producto 3" }
+  { src: "/abonateLogo.jpg", alt: "Producto 3" },
 ];
 
 function Inicio() {
@@ -78,6 +80,7 @@ function App() {
           <Link to="/">Inicio</Link>
           <Link to="/servicios">Servicios</Link>
           <Link to="/productos">Productos</Link>
+          <Link to="/plantas">Plantas</Link>
           <Link to="/nosotros">Nosotros</Link>
         </nav>
       </header>
@@ -87,6 +90,7 @@ function App() {
           <Route path="/" element={<Inicio />} />
           <Route path="/servicios" element={<Servicios />} />
           <Route path="/productos" element={<Productos />} />
+          <Route path="/plantas" element={<Plantas />} />
           <Route path="/nosotros" element={<AcercaDe />} />
         </Routes>
       </main>
